@@ -114,12 +114,33 @@
     </div>
   </div>
 
+  <h2>Questions posées pendant les webinaires</h2>
+  <div class="kpis" style="margin-bottom:18px">
+    <div class="kpi"><div class="v">361</div><div class="l">Questions analysées</div><div class="s">3 sessions · hors bruit (son, remerciements)</div></div>
+    <div class="kpi"><div class="v" style="color:var(--pink)">62,9 %</div><div class="l">Niveau N2 — expertise</div><div class="s">227 questions · réglementaire / fiscal / cas particulier</div></div>
+    <div class="kpi"><div class="v" style="color:var(--accent2)">37,1 %</div><div class="l">Niveau N1 — self-service</div><div class="s">134 questions · adressables FAQ / tuto / in-app</div></div>
+    <div class="kpi"><div class="v" style="color:var(--muted)">56,5 %</div><div class="l">Fiscalité + Fact. Électronique</div><div class="s">le duo de thèmes dominant</div></div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Volume par thème</h3>
+      <p>Couleur = niveau de traitement. <span style="color:#e84393">■</span> N2 (expertise) · <span style="color:#00b894">■</span> N1 (self-service).</p>
+      <canvas id="themes" style="max-height:360px"></canvas>
+    </div>
+    <div class="card">
+      <h3>Répartition par niveau</h3>
+      <p>Près de deux tiers des questions nécessitent une réponse experte (N2).</p>
+      <canvas id="levels" style="max-height:360px"></canvas>
+    </div>
+  </div>
+
   <h2>Observations actionnables</h2>
   <div class="card full">
     <ol style="padding-left:20px;font-size:14px;line-height:1.7">
       <li style="margin-bottom:10px"><strong>L'attribution stricte sous-estime l'impact.</strong> 561 des 614 comptes ont été créés <em>avant</em> le webinaire, souvent 1-3 j avant (au moment de l'inscription). Tester au prochain run une attribution sur la <strong>date d'inscription Livestorm</strong>.</li>
       <li style="margin-bottom:10px"><strong>Le levier principal est l'upsell, pas l'acquisition.</strong> 14 des 19 souscriptions attribuables (74 %) sont des comptes existants passés au payant. Cibler une <strong>relance post-webinaire</strong> sur les comptes gratuits existants.</li>
-      <li><strong>Cohorte 30/06 encore prématurée</strong> (2 souscriptions, run à J+1). Les conversions devraient remonter — à re-vérifier au prochain passage (délai médian souscription ≈ 3 j).</li>
+      <li style="margin-bottom:10px"><strong>Cohorte 30/06 encore prématurée</strong> (2 souscriptions, run à J+1). Les conversions devraient remonter — à re-vérifier au prochain passage (délai médian souscription ≈ 3 j).</li>
+      <li><strong>Un webinaire avant tout réglementaire.</strong> 63 % des questions sont N2 (fiscalité, URSSAF, facturation électronique). Prioriser une <strong>base de connaissances N2</strong> (mandat, e-reporting, dates, non-assujettis TVA) et déporter le N1 (produit, tarifs, inscription) en self-service pour libérer le temps d'antenne.</li>
     </ol>
   </div>
 
@@ -178,6 +199,30 @@ const upsells=[['23/06','Pro',5],['23/06','Pro',2],['23/06','Pro',0],['23/06','S
 ['25/06','Pro',0],['25/06','Pro',3],['30/06','Start',1],['30/06','Pro',0]];
 document.getElementById('upsellRows').innerHTML=upsells.map(r=>
   `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="n">${r[2]} j</td></tr>`).join('');
+
+const themeData=[
+ ['Fiscalité, URSSAF & compta',108,'N2'],
+ ['Facturation Électronique & réforme',96,'N2'],
+ ['Produit — factures, devis, perso',73,'N1'],
+ ['Intégrations & paiements',26,'N1'],
+ ['Statut, régime & cas particuliers',19,'N2'],
+ ['Tarifs, offres & abonnement',15,'N1'],
+ ['Compte, inscription & prise en main',10,'N1'],
+ ['Données & migration',4,'N2'],
+ ['Support & accompagnement',3,'N1'],
+ ['Logistique webinaire & divers',2,'N1']
+];
+new Chart(themes,{type:'bar',indexAxis:'y',data:{labels:themeData.map(t=>t[0]),
+  datasets:[{data:themeData.map(t=>t[1]),
+    backgroundColor:themeData.map(t=>t[2]==='N2'?'#e84393':'#00b894'),borderRadius:5}]},
+  options:{responsive:true,plugins:{legend:{display:false},
+    tooltip:{callbacks:{label:c=>c.parsed.x+' questions · '+themeData[c.dataIndex][2]}}},
+   scales:{x:{...gridCfg,beginAtZero:true},y:{...gridCfg,ticks:{color:muted,font:{size:11}}}}}});
+
+new Chart(levels,{type:'doughnut',data:{labels:['N2 — expertise','N1 — self-service'],
+  datasets:[{data:[227,134],backgroundColor:['#e84393','#00b894'],borderColor:'#1a1d27',borderWidth:3}]},
+  options:{responsive:true,cutout:'62%',plugins:{legend:{position:'bottom'},
+    tooltip:{callbacks:{label:c=>c.label+' : '+c.parsed+' ('+(c.parsed/361*100).toFixed(1)+'%)'}}}}});
 </script>
 </body>
 </html>
