@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conversion webinaires démo — Abby · Run 01/07/2026</title>
+<title>Conversion webinaires démo — Abby · Run 02/07/2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root{
@@ -45,28 +45,28 @@
 <div class="wrap">
   <header>
     <h1>Conversion des webinaires démo — Abby</h1>
-    <div class="sub">Run du <strong>1er juillet 2026</strong> · Cohortes 23/06, 25/06, 30/06/2026 · 791 inscrits suivis (base Notion « Webinaires - Conversion »)</div>
+    <div class="sub">Run du <strong>2 juillet 2026</strong> · Cohortes 23/06, 25/06, 30/06, 02/07/2026 · 962 inscrits suivis (base Notion « Webinaires - Conversion »)</div>
   </header>
 
   <div class="note">
-    <strong>Note méthodologique.</strong> Le connecteur Abby étant inexploitable, l'existence d'un <em>compte Abby</em> est mesurée via l'existence d'un client Stripe (créé dès l'inscription, gratuits inclus) et sa date de création. Le statut payant vient des abonnements Stripe actifs. Dénominateur de tous les taux = inscrits dédupliqués. Catégories imbriquées : « a souscrit » ⊂ « a un compte ». Présents = indicatif, jamais dénominateur.
+    <strong>Note méthodologique.</strong> Le connecteur Abby étant inexploitable, l'existence d'un <em>compte Abby</em> est mesurée via l'existence d'un client Stripe (créé dès l'inscription, gratuits inclus) et sa date de création. Le statut payant vient des abonnements Stripe actifs. Dénominateur de tous les taux = inscrits dédupliqués. Catégories imbriquées : « a souscrit » ⊂ « a un compte ». Présents = indicatif, jamais dénominateur. <strong>Ce run</strong> a re-vérifié via Stripe les 205 inscrits du jour (171 nouveaux + 34 ré-inscrits) ; les autres cohortes conservent leur statut du 01/07 — re-scan complet recommandé au prochain passage.
   </div>
 
-  <h2>Chiffres clés (cumulé)</h2>
+  <h2>Chiffres clés (cumulé · 4 cohortes)</h2>
   <div class="kpis">
-    <div class="kpi"><div class="v">791</div><div class="l">Inscrits</div><div class="s">23/06 : 281 · 25/06 : 229 · 30/06 : 281</div></div>
-    <div class="kpi"><div class="v">447</div><div class="l">Présents (indicatif)</div><div class="s">56,5 % des inscrits</div></div>
-    <div class="kpi"><div class="v" style="color:var(--accent2)">6,7 %</div><div class="l">Comptes créés attribuables</div><div class="s">53 inscrits</div></div>
-    <div class="kpi"><div class="v" style="color:var(--pink)">2,4 %</div><div class="l">Abonnés payants attribuables</div><div class="s">19 inscrits · dont 14 upsells</div></div>
-    <div class="kpi"><div class="v" style="color:var(--muted)">71 %</div><div class="l">Comptes préexistants</div><div class="s">561 · créés avant le webinaire</div></div>
+    <div class="kpi"><div class="v">962</div><div class="l">Inscrits</div><div class="s">23/06 : 281 · 25/06 : 229 · 30/06 : 281 · 02/07 : 171</div></div>
+    <div class="kpi"><div class="v">562</div><div class="l">Présents (indicatif)</div><div class="s">58,4 % des inscrits</div></div>
+    <div class="kpi"><div class="v" style="color:var(--accent2)">6,7 %</div><div class="l">Comptes créés attribuables</div><div class="s">64 inscrits</div></div>
+    <div class="kpi"><div class="v" style="color:var(--pink)">2,2 %</div><div class="l">Abonnés payants attribuables</div><div class="s">21 inscrits · dont 16 upsells</div></div>
+    <div class="kpi"><div class="v" style="color:var(--muted)">70,8 %</div><div class="l">Comptes préexistants</div><div class="s">681 · créés avant le webinaire</div></div>
   </div>
 
   <div class="card full" style="margin-top:18px">
     <h3>Que veulent dire les deux indicateurs « attribuables » ?</h3>
     <p style="margin-bottom:0">Ils mesurent les conversions réellement <strong>provoquées</strong> par le webinaire : on ne retient que ce qui s'est produit le jour du webinaire ou après, rattaché à la 1re cohorte de l'inscrit.</p>
     <ul style="font-size:14px;line-height:1.7;padding-left:20px;margin-top:12px">
-      <li style="margin-bottom:8px"><strong style="color:var(--accent2)">Comptes créés attribuables (53 · 6,7 %)</strong> — comptes Abby créés à la date du webinaire ou plus tard. On <strong>exclut</strong> les 561 comptes préexistants (créés avant l'inscription) : les compter reviendrait à attribuer au webinaire un compte déjà possédé. D'où l'écart avec la « référence brute » (77,6 % de comptes existants), qui préexistait pour l'essentiel.</li>
-      <li><strong style="color:var(--pink)">Abonnés payants attribuables (19 · 2,4 %)</strong> — abonnements Stripe actifs souscrits le jour du webinaire ou après. Règle <strong>non symétrique</strong> : un compte préexistant gratuit qui passe au payant après le webinaire est un <strong>upsell</strong> réel et compte ici (14 des 19 cas) ; les 38 déjà payants avant leur webinaire sont exclus.</li>
+      <li style="margin-bottom:8px"><strong style="color:var(--accent2)">Comptes créés attribuables (64 · 6,7 %)</strong> — comptes Abby créés à la date du webinaire ou plus tard. On <strong>exclut</strong> les 681 comptes préexistants (créés avant l'inscription) : les compter reviendrait à attribuer au webinaire un compte déjà possédé. D'où l'écart avec la « référence brute » (≈ 77 % de comptes existants), qui préexistait pour l'essentiel.</li>
+      <li><strong style="color:var(--pink)">Abonnés payants attribuables (21 · 2,2 %)</strong> — abonnements Stripe actifs souscrits le jour du webinaire ou après. Règle <strong>non symétrique</strong> : un compte préexistant gratuit qui passe au payant après le webinaire est un <strong>upsell</strong> réel et compte ici (16 des 21 cas) ; les inscrits déjà payants avant leur webinaire sont exclus.</li>
     </ul>
     <p style="margin-top:12px;margin-bottom:0;font-size:12px">Logique imbriquée (« a souscrit » ⊂ « a un compte »), dénominateur = inscrits dédupliqués. Le compte est mesuré via le client Stripe (proxy Abby), à valider si l'accès Abby est rétabli.</p>
   </div>
@@ -84,6 +84,9 @@
       <canvas id="cohortVol"></canvas>
     </div>
   </div>
+  <div class="note" style="border-left-color:var(--accent)">
+    <strong>Cohorte 02/07 (webinaire du jour).</strong> 171 inscrits · 115 présents · 130 comptes (76,0 %) · 11 comptes attribuables (6,4 %) · 12 payants (7,0 %) · <strong>0 payant attribuable</strong> — normal à J+0 : le délai médian de souscription est de ≈ 3 j. À re-vérifier au prochain run.
+  </div>
 
   <h2>Entonnoir sur 100 inscrits (cumulé, attribuable)</h2>
   <div class="card full">
@@ -95,7 +98,7 @@
   <div class="grid">
     <div class="card">
       <h3>Répartition plan × fractionnement</h3>
-      <p>57 abonnés payants actifs parmi les inscrits. L'annuel représente 77 %.</p>
+      <p>69 abonnés payants actifs (plan identifié) parmi les inscrits. L'annuel représente 72 %.</p>
       <canvas id="plans"></canvas>
     </div>
     <div class="card">
@@ -105,15 +108,15 @@
     </div>
   </div>
 
-  <h2>Nature des conversions payantes attribuables (19)</h2>
+  <h2>Nature des conversions payantes attribuables (21)</h2>
   <div class="grid">
     <div class="card">
       <h3>Upsell vs. nouveau compte</h3>
-      <p>74 % des souscriptions attribuables viennent de comptes déjà existants.</p>
+      <p>76 % des souscriptions attribuables viennent de comptes déjà existants.</p>
       <canvas id="nature" style="max-height:260px"></canvas>
     </div>
     <div class="card">
-      <h3>Les 14 upsells (préexistant → payant après)</h3>
+      <h3>Les 16 upsells (préexistant → payant après)</h3>
       <p>Comptes gratuits/existants passés au payant après le webinaire.</p>
       <div style="max-height:260px;overflow:auto">
       <table>
@@ -124,12 +127,15 @@
     </div>
   </div>
 
-  <h2>Questions posées pendant les webinaires</h2>
+  <h2>Questions posées pendant les webinaires (cumulé · 4 sessions)</h2>
   <div class="kpis" style="margin-bottom:18px">
-    <div class="kpi"><div class="v">361</div><div class="l">Questions analysées</div><div class="s">3 sessions · hors bruit (son, remerciements)</div></div>
-    <div class="kpi"><div class="v" style="color:var(--pink)">62,9 %</div><div class="l">Niveau N2 — expertise</div><div class="s">227 questions · réglementaire / fiscal / cas particulier</div></div>
-    <div class="kpi"><div class="v" style="color:var(--accent2)">37,1 %</div><div class="l">Niveau N1 — self-service</div><div class="s">134 questions · adressables FAQ / tuto / in-app</div></div>
-    <div class="kpi"><div class="v" style="color:var(--muted)">56,5 %</div><div class="l">Fiscalité + Fact. Électronique</div><div class="s">le duo de thèmes dominant</div></div>
+    <div class="kpi"><div class="v">513</div><div class="l">Questions analysées</div><div class="s">4 sessions · hors bruit (son, remerciements)</div></div>
+    <div class="kpi"><div class="v" style="color:var(--pink)">53,4 %</div><div class="l">Niveau N2 — expertise</div><div class="s">274 questions · réglementaire / fiscal / cas particulier</div></div>
+    <div class="kpi"><div class="v" style="color:var(--accent2)">46,6 %</div><div class="l">Niveau N1 — self-service</div><div class="s">239 questions · adressables FAQ / tuto / in-app</div></div>
+    <div class="kpi"><div class="v" style="color:var(--muted)">47 %</div><div class="l">Fiscalité + Fact. Électronique</div><div class="s">le duo de thèmes dominant</div></div>
+  </div>
+  <div class="note">
+    <strong>Évolution du 02/07.</strong> La session du jour (152 questions) était nettement plus <em>self-service</em> (69 % N1) que les précédentes, faisant reculer la part N2 cumulée de 63 % à 53 %. Attention : le dictionnaire « Tarifs » a été élargi pour ce run (Basic/Start/Pro/Business, version, formule) — une partie de la hausse du thème Tarifs est un artefact de classification, à consolider au prochain passage.
   </div>
   <div class="grid">
     <div class="card">
@@ -139,7 +145,7 @@
     </div>
     <div class="card">
       <h3>Répartition par niveau</h3>
-      <p>Près de deux tiers des questions nécessitent une réponse experte (N2).</p>
+      <p>Un peu plus de la moitié des questions nécessitent une réponse experte (N2).</p>
       <canvas id="levels" style="max-height:360px"></canvas>
     </div>
   </div>
@@ -158,8 +164,8 @@
       <h3><span style="color:var(--accent2)">N1</span> — verbatims les plus employés</h3>
       <p>Les 3 demandes les plus récurrentes côté self-service.</p>
       <ul style="font-size:13px;line-height:1.6;padding-left:18px;margin:0">
-        <li style="margin-bottom:10px"><strong>Faire / éditer une facture ou un devis (65 q.)</strong><br><em>« En micro, je dois éditer 4 factures par an à un pro, dois-je payer un abonnement ? »</em></li>
-        <li style="margin-bottom:10px"><strong>Prix / version gratuite (22 q.)</strong><br><em>« Pour la signature électronique, la version gratuite est suffisante ? »</em></li>
+        <li style="margin-bottom:10px"><strong>Faire / éditer une facture ou un devis</strong><br><em>« En micro, je dois éditer 4 factures par an à un pro, dois-je payer un abonnement ? »</em></li>
+        <li style="margin-bottom:10px"><strong>Prix / version gratuite</strong><br><em>« Pour la signature électronique, la version gratuite est suffisante ? »</em></li>
         <li><strong>Enregistrer / classer une facture</strong><br><em>« Si mon client me paye en chèque, comment je peux "classer" ma facture comme payée ? »</em></li>
       </ul>
     </div>
@@ -167,9 +173,9 @@
       <h3><span style="color:var(--pink)">N2</span> — verbatims les plus employés</h3>
       <p>Les 3 demandes les plus récurrentes côté expertise.</p>
       <ul style="font-size:13px;line-height:1.6;padding-left:18px;margin:0">
-        <li style="margin-bottom:10px"><strong>URSSAF / déclarations (50 q.)</strong><br><em>« Est-ce qu'on peut continuer à déclarer le CA sur le téléphone sans passer par Abby en micro ? »</em></li>
-        <li style="margin-bottom:10px"><strong>Statut / régime / cas particulier (57 q.)</strong><br><em>« En micro-entreprise, le livre des dépenses est-il obligatoire ? »</em></li>
-        <li><strong>Facturation Électronique / réforme (41 q.)</strong><br><em>« J'envoie des factures aux mairies via Chorus Pro. Pourrais-je continuer ? »</em></li>
+        <li style="margin-bottom:10px"><strong>URSSAF / déclarations</strong><br><em>« Est-ce qu'on peut continuer à déclarer le CA sur le téléphone sans passer par Abby en micro ? »</em></li>
+        <li style="margin-bottom:10px"><strong>Statut / régime / cas particulier</strong><br><em>« En micro-entreprise, le livre des dépenses est-il obligatoire ? »</em></li>
+        <li><strong>Facturation Électronique / réforme</strong><br><em>« J'envoie des factures aux mairies via Chorus Pro. Pourrais-je continuer ? »</em></li>
       </ul>
     </div>
   </div>
@@ -177,15 +183,15 @@
   <h2>Observations actionnables</h2>
   <div class="card full">
     <ol style="padding-left:20px;font-size:14px;line-height:1.7">
-      <li style="margin-bottom:10px"><strong>L'attribution stricte sous-estime l'impact.</strong> 561 des 614 comptes ont été créés <em>avant</em> le webinaire, souvent 1-3 j avant (au moment de l'inscription). Tester au prochain run une attribution sur la <strong>date d'inscription Livestorm</strong>.</li>
-      <li style="margin-bottom:10px"><strong>Le levier principal est l'upsell, pas l'acquisition.</strong> 14 des 19 souscriptions attribuables (74 %) sont des comptes existants passés au payant. Cibler une <strong>relance post-webinaire</strong> sur les comptes gratuits existants.</li>
-      <li style="margin-bottom:10px"><strong>Cohorte 30/06 encore prématurée</strong> (2 souscriptions, run à J+1). Les conversions devraient remonter — à re-vérifier au prochain passage (délai médian souscription ≈ 3 j).</li>
-      <li><strong>Un webinaire avant tout réglementaire.</strong> 63 % des questions sont N2 (fiscalité, URSSAF, facturation électronique). Prioriser une <strong>base de connaissances N2</strong> (mandat, e-reporting, dates, non-assujettis TVA) et déporter le N1 (produit, tarifs, inscription) en self-service pour libérer le temps d'antenne.</li>
+      <li style="margin-bottom:10px"><strong>L'attribution stricte sous-estime l'impact.</strong> ≈ 71 % des comptes ont été créés <em>avant</em> le webinaire, souvent 1-3 j avant (au moment de l'inscription). Tester une attribution sur la <strong>date d'inscription Livestorm</strong> plutôt que la date du webinaire.</li>
+      <li style="margin-bottom:10px"><strong>Le levier principal reste l'upsell, pas l'acquisition.</strong> 16 des 21 souscriptions attribuables (76 %) sont des comptes existants passés au payant. Cibler une <strong>relance post-webinaire</strong> sur les comptes gratuits existants — ce run a détecté 2 upsells tardifs (23/06 et 30/06) survenus le 02/07.</li>
+      <li style="margin-bottom:10px"><strong>Cohorte 02/07 à J+0.</strong> 0 souscription attribuable, ce qui est attendu (délai médian ≈ 3 j). Les conversions devraient remonter — re-vérifier au prochain passage.</li>
+      <li><strong>Un webinaire réglementaire, mais une session 02/07 plus produit.</strong> Sur le cumul 53 % des questions sont N2 (fiscalité, URSSAF, FE), mais la session du jour était à 69 % N1. Maintenir une <strong>base de connaissances N2</strong> (mandat, e-reporting, dates, non-assujettis TVA) tout en déportant le N1 (produit, tarifs, inscription) en self-service.</li>
     </ol>
   </div>
 
   <footer>
-    Généré le 1er juillet 2026 · Source inscrits : exports Livestorm · Compte & payant : Stripe (proxy Abby) · Base de suivi : Notion « Webinaires - Conversion ». Suivi vivant : les cohortes sont re-vérifiées à chaque run pour rattraper les conversions tardives.
+    Généré le 2 juillet 2026 · Source inscrits : exports Livestorm · Compte & payant : Stripe (proxy Abby) · Base de suivi : Notion « Webinaires - Conversion ». Suivi vivant : les cohortes sont re-vérifiées à chaque run pour rattraper les conversions tardives. Données agrégées, sans information personnelle.
   </footer>
 </div>
 
@@ -195,62 +201,62 @@ Chart.defaults.color=muted; Chart.defaults.font.family='-apple-system,Segoe UI,R
 Chart.defaults.plugins.legend.labels.boxWidth=12; Chart.defaults.plugins.legend.labels.padding=14;
 const gridCfg={grid:{color:grid},ticks:{color:muted}};
 
-new Chart(cohortAttr,{type:'bar',data:{labels:['23/06','25/06','30/06'],
+new Chart(cohortAttr,{type:'bar',data:{labels:['23/06','25/06','30/06','02/07'],
   datasets:[
-   {label:'Comptes créés attr. (%)',data:[8.9,5.7,5.3],backgroundColor:'#00b894',borderRadius:5},
-   {label:'Payants attr. (%)',data:[2.5,4.4,0.7],backgroundColor:'#e84393',borderRadius:5}
+   {label:'Comptes créés attr. (%)',data:[8.9,5.7,5.3,6.4],backgroundColor:'#00b894',borderRadius:5},
+   {label:'Payants attr. (%)',data:[2.8,4.4,1.1,0.0],backgroundColor:'#e84393',borderRadius:5}
   ]},
   options:{responsive:true,scales:{y:{...gridCfg,beginAtZero:true,ticks:{color:muted,callback:v=>v+'%'}},x:gridCfg},plugins:{legend:{position:'bottom'}}}});
 
-new Chart(cohortVol,{type:'bar',data:{labels:['23/06','25/06','30/06'],
+new Chart(cohortVol,{type:'bar',data:{labels:['23/06','25/06','30/06','02/07'],
   datasets:[
-   {label:'Inscrits',data:[281,229,281],backgroundColor:'#6c5ce7',borderRadius:5},
-   {label:'Présents',data:[160,140,147],backgroundColor:'#0984e3',borderRadius:5},
-   {label:'Comptes existants',data:[218,180,216],backgroundColor:'#00cec9',borderRadius:5},
-   {label:'Payants existants',data:[20,22,15],backgroundColor:'#fdcb6e',borderRadius:5}
+   {label:'Inscrits',data:[281,229,281,171],backgroundColor:'#6c5ce7',borderRadius:5},
+   {label:'Présents',data:[160,140,147,115],backgroundColor:'#0984e3',borderRadius:5},
+   {label:'Comptes existants',data:[218,180,217,130],backgroundColor:'#00cec9',borderRadius:5},
+   {label:'Payants existants',data:[21,22,15,12],backgroundColor:'#fdcb6e',borderRadius:5}
   ]},
   options:{responsive:true,scales:{y:{...gridCfg,beginAtZero:true},x:gridCfg},plugins:{legend:{position:'bottom'}}}});
 
 new Chart(funnel,{type:'bar',indexAxis:'y',data:{labels:['Inscrits','Comptes créés (attr.)','Abonnés payants (attr.)'],
-  datasets:[{data:[100,6.7,2.4],backgroundColor:['#6c5ce7','#00b894','#e84393'],borderRadius:6}]},
+  datasets:[{data:[100,6.7,2.2],backgroundColor:['#6c5ce7','#00b894','#e84393'],borderRadius:6}]},
   options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+' / 100 inscrits'}}},
    scales:{x:{...gridCfg,beginAtZero:true,max:100,ticks:{color:muted,callback:v=>v}},y:gridCfg}}});
 
 new Chart(plans,{type:'bar',data:{labels:['Start','Pro','Business'],
   datasets:[
-   {label:'Mensuel',data:[3,8,2],backgroundColor:'#0984e3',borderRadius:5},
-   {label:'Annuel',data:[17,23,4],backgroundColor:'#00b894',borderRadius:5}
+   {label:'Mensuel',data:[3,13,3],backgroundColor:'#0984e3',borderRadius:5},
+   {label:'Annuel',data:[20,26,4],backgroundColor:'#00b894',borderRadius:5}
   ]},
   options:{responsive:true,scales:{x:{...gridCfg,stacked:true},y:{...gridCfg,stacked:true,beginAtZero:true}},plugins:{legend:{position:'bottom'}}}});
 
 new Chart(delays,{type:'bar',data:{labels:['< 7 j','7–30 j','30 j +'],
   datasets:[
-   {label:'Souscriptions',data:[18,1,0],backgroundColor:'#e84393',borderRadius:5},
-   {label:'Créations de compte',data:[50,3,0],backgroundColor:'#00b894',borderRadius:5}
+   {label:'Souscriptions',data:[19,2,0],backgroundColor:'#e84393',borderRadius:5},
+   {label:'Créations de compte',data:[61,3,0],backgroundColor:'#00b894',borderRadius:5}
   ]},
   options:{responsive:true,scales:{y:{...gridCfg,beginAtZero:true},x:gridCfg},plugins:{legend:{position:'bottom'}}}});
 
 new Chart(nature,{type:'doughnut',data:{labels:['Upsell (compte préexistant)','Nouveau compte'],
-  datasets:[{data:[14,5],backgroundColor:['#00b894','#6c5ce7'],borderColor:'#1a1d27',borderWidth:3}]},
+  datasets:[{data:[16,5],backgroundColor:['#00b894','#6c5ce7'],borderColor:'#1a1d27',borderWidth:3}]},
   options:{responsive:true,cutout:'62%',plugins:{legend:{position:'bottom'}}}});
 
-const upsells=[['23/06','Pro',5],['23/06','Pro',2],['23/06','Pro',0],['23/06','Start',5],['23/06','Pro',3],
-['25/06','Pro',1],['25/06','Pro',5],['25/06','Start',4],['25/06','Start',0],['25/06','Start',5],
-['25/06','Pro',0],['25/06','Pro',3],['30/06','Start',1],['30/06','Pro',0]];
+const upsells=[['23/06','Pro',0],['23/06','Pro',2],['23/06','Pro',3],['23/06','Pro',5],['23/06','Start',5],['23/06','Pro',9.5],
+['25/06','Start',0],['25/06','Pro',0],['25/06','Pro',1],['25/06','Pro',3],['25/06','Start',4],['25/06','Pro',5],['25/06','Start',5],
+['30/06','Pro',0],['30/06','Start',1.5],['30/06','Start',2.6]];
 document.getElementById('upsellRows').innerHTML=upsells.map(r=>
   `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="n">${r[2]} j</td></tr>`).join('');
 
 const themeData=[
- ['Fiscalité, URSSAF & compta',108,'N2'],
- ['Facturation Électronique & réforme',96,'N2'],
- ['Produit — factures, devis, perso',73,'N1'],
- ['Intégrations & paiements',26,'N1'],
- ['Statut, régime & cas particuliers',19,'N2'],
- ['Tarifs, offres & abonnement',15,'N1'],
- ['Compte, inscription & prise en main',10,'N1'],
- ['Données & migration',4,'N2'],
- ['Support & accompagnement',3,'N1'],
- ['Logistique webinaire & divers',2,'N1']
+ ['Fiscalité, URSSAF & compta',130,'N2'],
+ ['Produit — factures, devis & perso',116,'N1'],
+ ['Facturation Électronique & réforme',111,'N2'],
+ ['Tarifs, offres & abonnement',63,'N1'],
+ ['Intégrations & paiements',29,'N1'],
+ ['Statut, régime & cas particuliers',26,'N2'],
+ ['Compte, inscription & prise en main',14,'N1'],
+ ['Données & migration',7,'N2'],
+ ['Support & accompagnement',7,'N1'],
+ ['Logistique webinaire & divers',3,'N1']
 ];
 new Chart(themes,{type:'bar',indexAxis:'y',data:{labels:themeData.map(t=>t[0]),
   datasets:[{data:themeData.map(t=>t[1]),
@@ -260,9 +266,9 @@ new Chart(themes,{type:'bar',indexAxis:'y',data:{labels:themeData.map(t=>t[0]),
    scales:{x:{...gridCfg,beginAtZero:true},y:{...gridCfg,ticks:{color:muted,font:{size:11}}}}}});
 
 new Chart(levels,{type:'doughnut',data:{labels:['N2 — expertise','N1 — self-service'],
-  datasets:[{data:[227,134],backgroundColor:['#e84393','#00b894'],borderColor:'#1a1d27',borderWidth:3}]},
+  datasets:[{data:[274,239],backgroundColor:['#e84393','#00b894'],borderColor:'#1a1d27',borderWidth:3}]},
   options:{responsive:true,cutout:'62%',plugins:{legend:{position:'bottom'},
-    tooltip:{callbacks:{label:c=>c.label+' : '+c.parsed+' ('+(c.parsed/361*100).toFixed(1)+'%)'}}}}});
+    tooltip:{callbacks:{label:c=>c.label+' : '+c.parsed+' ('+(c.parsed/513*100).toFixed(1)+'%)'}}}}});
 </script>
 </body>
 </html>
