@@ -61,6 +61,16 @@
     <div class="kpi"><div class="v" style="color:var(--muted)">71 %</div><div class="l">Comptes préexistants</div><div class="s">561 · créés avant le webinaire</div></div>
   </div>
 
+  <div class="card full" style="margin-top:18px">
+    <h3>Que veulent dire les deux indicateurs « attribuables » ?</h3>
+    <p style="margin-bottom:0">Ils mesurent les conversions réellement <strong>provoquées</strong> par le webinaire : on ne retient que ce qui s'est produit le jour du webinaire ou après, rattaché à la 1re cohorte de l'inscrit.</p>
+    <ul style="font-size:14px;line-height:1.7;padding-left:20px;margin-top:12px">
+      <li style="margin-bottom:8px"><strong style="color:var(--accent2)">Comptes créés attribuables (53 · 6,7 %)</strong> — comptes Abby créés à la date du webinaire ou plus tard. On <strong>exclut</strong> les 561 comptes préexistants (créés avant l'inscription) : les compter reviendrait à attribuer au webinaire un compte déjà possédé. D'où l'écart avec la « référence brute » (77,6 % de comptes existants), qui préexistait pour l'essentiel.</li>
+      <li><strong style="color:var(--pink)">Abonnés payants attribuables (19 · 2,4 %)</strong> — abonnements Stripe actifs souscrits le jour du webinaire ou après. Règle <strong>non symétrique</strong> : un compte préexistant gratuit qui passe au payant après le webinaire est un <strong>upsell</strong> réel et compte ici (14 des 19 cas) ; les 38 déjà payants avant leur webinaire sont exclus.</li>
+    </ul>
+    <p style="margin-top:12px;margin-bottom:0;font-size:12px">Logique imbriquée (« a souscrit » ⊂ « a un compte »), dénominateur = inscrits dédupliqués. Le compte est mesuré via le client Stripe (proxy Abby), à valider si l'accès Abby est rétabli.</p>
+  </div>
+
   <h2>Vue par cohorte</h2>
   <div class="grid">
     <div class="card">
@@ -131,6 +141,36 @@
       <h3>Répartition par niveau</h3>
       <p>Près de deux tiers des questions nécessitent une réponse experte (N2).</p>
       <canvas id="levels" style="max-height:360px"></canvas>
+    </div>
+  </div>
+
+  <div class="card full" style="margin-top:18px">
+    <h3>Comment les questions ont été sectorisées</h3>
+    <p style="margin-bottom:0">Chaque question reçoit deux étiquettes indépendantes : un <strong>thème</strong> (de quoi ça parle) et un <strong>niveau de traitement N1/N2</strong> (quel effort de réponse). Classification lexicale par dictionnaire de mots-clés priorisés.</p>
+    <ul style="font-size:14px;line-height:1.7;padding-left:20px;margin-top:12px;margin-bottom:0">
+      <li style="margin-bottom:8px"><strong style="color:var(--accent2)">N1 — self-service.</strong> Question simple et récurrente, adressable par FAQ, tutoriel ou message in-app, sans expertise réglementaire : usage produit, prix et versions, intégrations, prise en main.</li>
+      <li><strong style="color:var(--pink)">N2 — expertise.</strong> Question réglementaire, fiscale ou de conformité où une réponse erronée a des conséquences : Facturation Électronique, URSSAF / déclarations, statut et cas particuliers. Justifie une réponse humaine experte.</li>
+    </ul>
+  </div>
+
+  <div class="grid" style="margin-top:18px">
+    <div class="card">
+      <h3><span style="color:var(--accent2)">N1</span> — verbatims les plus employés</h3>
+      <p>Les 3 demandes les plus récurrentes côté self-service.</p>
+      <ul style="font-size:13px;line-height:1.6;padding-left:18px;margin:0">
+        <li style="margin-bottom:10px"><strong>Faire / éditer une facture ou un devis (65 q.)</strong><br><em>« En micro, je dois éditer 4 factures par an à un pro, dois-je payer un abonnement ? »</em></li>
+        <li style="margin-bottom:10px"><strong>Prix / version gratuite (22 q.)</strong><br><em>« Pour la signature électronique, la version gratuite est suffisante ? »</em></li>
+        <li><strong>Enregistrer / classer une facture</strong><br><em>« Si mon client me paye en chèque, comment je peux "classer" ma facture comme payée ? »</em></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span style="color:var(--pink)">N2</span> — verbatims les plus employés</h3>
+      <p>Les 3 demandes les plus récurrentes côté expertise.</p>
+      <ul style="font-size:13px;line-height:1.6;padding-left:18px;margin:0">
+        <li style="margin-bottom:10px"><strong>URSSAF / déclarations (50 q.)</strong><br><em>« Est-ce qu'on peut continuer à déclarer le CA sur le téléphone sans passer par Abby en micro ? »</em></li>
+        <li style="margin-bottom:10px"><strong>Statut / régime / cas particulier (57 q.)</strong><br><em>« En micro-entreprise, le livre des dépenses est-il obligatoire ? »</em></li>
+        <li><strong>Facturation Électronique / réforme (41 q.)</strong><br><em>« J'envoie des factures aux mairies via Chorus Pro. Pourrais-je continuer ? »</em></li>
+      </ul>
     </div>
   </div>
 
