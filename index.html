@@ -1,5 +1,4 @@
-<!DOCTYPE html> <!-- redeploy 02/07 -->
-
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -50,15 +49,15 @@
   </header>
 
   <div class="note">
-    <strong>Note méthodologique.</strong> Le connecteur Abby étant inexploitable, l'existence d'un <em>compte Abby</em> est mesurée via l'existence d'un client Stripe (créé dès l'inscription, gratuits inclus) et sa date de création. Le statut payant vient des abonnements Stripe actifs. Dénominateur de tous les taux = inscrits dédupliqués. Catégories imbriquées : « a souscrit » ⊂ « a un compte ». Présents = indicatif, jamais dénominateur. <strong>Ce run</strong> a re-vérifié via Stripe les 205 inscrits du jour (171 nouveaux + 34 ré-inscrits) ; les autres cohortes conservent leur statut du 01/07 — re-scan complet recommandé au prochain passage.
+    <strong>Note méthodologique.</strong> Le connecteur Abby étant inexploitable, l'existence d'un <em>compte Abby</em> est mesurée via l'existence d'un client Stripe (créé dès l'inscription, gratuits inclus) et sa date de création. Le statut payant vient des abonnements Stripe actifs. <strong>Dénominateur des taux de conversion attribuables = présents (participants)</strong> — ~50 % des inscrits ne se présentent pas, et l'enjeu est de savoir si un <em>participant</em> convertit derrière. Les inscrits restent la base de suivi et de la « référence brute » (installed base). Catégories imbriquées : « a souscrit » ⊂ « a un compte ». <strong>Ce run</strong> a re-vérifié via Stripe les 205 inscrits du jour (171 nouveaux + 34 ré-inscrits) ; les autres cohortes conservent leur statut du 01/07 — re-scan complet recommandé au prochain passage.
   </div>
 
   <h2>Chiffres clés (cumulé · 4 cohortes)</h2>
   <div class="kpis">
     <div class="kpi"><div class="v">962</div><div class="l">Inscrits</div><div class="s">23/06 : 281 · 25/06 : 229 · 30/06 : 281 · 02/07 : 171</div></div>
-    <div class="kpi"><div class="v">562</div><div class="l">Présents (indicatif)</div><div class="s">58,4 % des inscrits</div></div>
-    <div class="kpi"><div class="v" style="color:var(--accent2)">6,7 %</div><div class="l">Comptes créés attribuables</div><div class="s">64 inscrits</div></div>
-    <div class="kpi"><div class="v" style="color:var(--pink)">2,2 %</div><div class="l">Abonnés payants attribuables</div><div class="s">21 inscrits · dont 16 upsells</div></div>
+    <div class="kpi"><div class="v">562</div><div class="l">Présents (dénominateur des conversions)</div><div class="s">58,4 % des inscrits</div></div>
+    <div class="kpi"><div class="v" style="color:var(--accent2)">11,4 %</div><div class="l">Comptes créés attribuables</div><div class="s">64 sur 562 présents · 6,7 % des inscrits</div></div>
+    <div class="kpi"><div class="v" style="color:var(--pink)">3,7 %</div><div class="l">Abonnés payants attribuables</div><div class="s">21 sur 562 présents · dont 16 upsells</div></div>
     <div class="kpi"><div class="v" style="color:var(--muted)">70,8 %</div><div class="l">Comptes préexistants</div><div class="s">681 · créés avant le webinaire</div></div>
   </div>
 
@@ -66,17 +65,17 @@
     <h3>Que veulent dire les deux indicateurs « attribuables » ?</h3>
     <p style="margin-bottom:0">Ils mesurent les conversions réellement <strong>provoquées</strong> par le webinaire : on ne retient que ce qui s'est produit le jour du webinaire ou après, rattaché à la 1re cohorte de l'inscrit.</p>
     <ul style="font-size:14px;line-height:1.7;padding-left:20px;margin-top:12px">
-      <li style="margin-bottom:8px"><strong style="color:var(--accent2)">Comptes créés attribuables (64 · 6,7 %)</strong> — comptes Abby créés à la date du webinaire ou plus tard. On <strong>exclut</strong> les 681 comptes préexistants (créés avant l'inscription) : les compter reviendrait à attribuer au webinaire un compte déjà possédé. D'où l'écart avec la « référence brute » (≈ 77 % de comptes existants), qui préexistait pour l'essentiel.</li>
-      <li><strong style="color:var(--pink)">Abonnés payants attribuables (21 · 2,2 %)</strong> — abonnements Stripe actifs souscrits le jour du webinaire ou après. Règle <strong>non symétrique</strong> : un compte préexistant gratuit qui passe au payant après le webinaire est un <strong>upsell</strong> réel et compte ici (16 des 21 cas) ; les inscrits déjà payants avant leur webinaire sont exclus.</li>
+      <li style="margin-bottom:8px"><strong style="color:var(--accent2)">Comptes créés attribuables (64 · 11,4 % des présents)</strong> — comptes Abby créés à la date du webinaire ou plus tard. On <strong>exclut</strong> les 681 comptes préexistants (créés avant l'inscription) : les compter reviendrait à attribuer au webinaire un compte déjà possédé. D'où l'écart avec la « référence brute » (≈ 77 % de comptes existants sur inscrits), qui préexistait pour l'essentiel.</li>
+      <li><strong style="color:var(--pink)">Abonnés payants attribuables (21 · 3,7 % des présents)</strong> — abonnements Stripe actifs souscrits le jour du webinaire ou après. Règle <strong>non symétrique</strong> : un compte préexistant gratuit qui passe au payant après le webinaire est un <strong>upsell</strong> réel et compte ici (16 des 21 cas) ; les inscrits déjà payants avant leur webinaire sont exclus.</li>
     </ul>
-    <p style="margin-top:12px;margin-bottom:0;font-size:12px">Logique imbriquée (« a souscrit » ⊂ « a un compte »), dénominateur = inscrits dédupliqués. Le compte est mesuré via le client Stripe (proxy Abby), à valider si l'accès Abby est rétabli.</p>
+    <p style="margin-top:12px;margin-bottom:0;font-size:12px">Logique imbriquée (« a souscrit » ⊂ « a un compte »), dénominateur = <strong>présents (participants)</strong>. Sur base inscrits, ces taux valaient 6,7 % et 2,2 %. Le compte est mesuré via le client Stripe (proxy Abby), à valider si l'accès Abby est rétabli.</p>
   </div>
 
   <h2>Vue par cohorte</h2>
   <div class="grid">
     <div class="card">
-      <h3>Taux attribuables au webinaire</h3>
-      <p>Compte créé / souscription réalisée le jour du webinaire ou après.</p>
+      <h3>Taux attribuables au webinaire (% des présents)</h3>
+      <p>Compte créé / souscription réalisée le jour du webinaire ou après, rapporté aux participants.</p>
       <canvas id="cohortAttr"></canvas>
     </div>
     <div class="card">
@@ -86,12 +85,12 @@
     </div>
   </div>
   <div class="note" style="border-left-color:var(--accent)">
-    <strong>Cohorte 02/07 (webinaire du jour).</strong> 171 inscrits · 115 présents · 130 comptes (76,0 %) · 11 comptes attribuables (6,4 %) · 12 payants (7,0 %) · <strong>0 payant attribuable</strong> — normal à J+0 : le délai médian de souscription est de ≈ 3 j. À re-vérifier au prochain run.
+    <strong>Cohorte 02/07 (webinaire du jour).</strong> 171 inscrits · 115 présents · 130 comptes existants (76,0 % des inscrits) · 11 comptes attribuables (9,6 % des présents) · <strong>0 payant attribuable</strong> — normal à J+0 : le délai médian de souscription est de ≈ 3 j. À re-vérifier au prochain run.
   </div>
 
-  <h2>Entonnoir sur 100 inscrits (cumulé, attribuable)</h2>
+  <h2>Entonnoir sur 100 présents (cumulé, attribuable)</h2>
   <div class="card full">
-    <p>De l'inscription à la souscription payante attribuable au webinaire.</p>
+    <p>Du participant à la souscription payante attribuable au webinaire (base présents ; 100 présents ≈ 171 inscrits).</p>
     <canvas id="funnel" style="max-height:220px"></canvas>
   </div>
 
@@ -204,8 +203,8 @@ const gridCfg={grid:{color:grid},ticks:{color:muted}};
 
 new Chart(cohortAttr,{type:'bar',data:{labels:['23/06','25/06','30/06','02/07'],
   datasets:[
-   {label:'Comptes créés attr. (%)',data:[8.9,5.7,5.3,6.4],backgroundColor:'#00b894',borderRadius:5},
-   {label:'Payants attr. (%)',data:[2.8,4.4,1.1,0.0],backgroundColor:'#e84393',borderRadius:5}
+   {label:'Comptes créés attr. (% présents)',data:[15.6,9.3,10.2,9.6],backgroundColor:'#00b894',borderRadius:5},
+   {label:'Payants attr. (% présents)',data:[5.0,7.1,2.0,0.0],backgroundColor:'#e84393',borderRadius:5}
   ]},
   options:{responsive:true,scales:{y:{...gridCfg,beginAtZero:true,ticks:{color:muted,callback:v=>v+'%'}},x:gridCfg},plugins:{legend:{position:'bottom'}}}});
 
@@ -218,9 +217,9 @@ new Chart(cohortVol,{type:'bar',data:{labels:['23/06','25/06','30/06','02/07'],
   ]},
   options:{responsive:true,scales:{y:{...gridCfg,beginAtZero:true},x:gridCfg},plugins:{legend:{position:'bottom'}}}});
 
-new Chart(funnel,{type:'bar',indexAxis:'y',data:{labels:['Inscrits','Comptes créés (attr.)','Abonnés payants (attr.)'],
-  datasets:[{data:[100,6.7,2.2],backgroundColor:['#6c5ce7','#00b894','#e84393'],borderRadius:6}]},
-  options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+' / 100 inscrits'}}},
+new Chart(funnel,{type:'bar',indexAxis:'y',data:{labels:['Présents','Comptes créés (attr.)','Abonnés payants (attr.)'],
+  datasets:[{data:[100,11.4,3.7],backgroundColor:['#0984e3','#00b894','#e84393'],borderRadius:6}]},
+  options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+' / 100 présents'}}},
    scales:{x:{...gridCfg,beginAtZero:true,max:100,ticks:{color:muted,callback:v=>v}},y:gridCfg}}});
 
 new Chart(plans,{type:'bar',data:{labels:['Start','Pro','Business'],
